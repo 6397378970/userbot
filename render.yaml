@@ -1,0 +1,23 @@
+# render.yaml
+services:
+  - type: worker
+    name: userbot
+    runtime: python
+    pythonVersion: 3.11.9
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: STRING_SESSION
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ACTIVE_AI
+        sync: false
+      - key: BOT_NAME
+        sync: false
+      - key: BOT_GENDER
+        sync: false
+      - key: BOT_USERNAME
+        sync: false
+      - key: REQUIRED_GROUP
+        sync: false
